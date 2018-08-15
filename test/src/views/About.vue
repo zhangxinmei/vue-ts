@@ -7,6 +7,7 @@
     <el-date-picker v-model="value1" type="date" placeholder="选择日期">
     </el-date-picker>
     <p>{{value1}}</p>
+    <List @confirm="clickList"></List>
   </div>
 </template>
 
@@ -14,14 +15,19 @@
 import { Component, Vue } from "vue-property-decorator";
 import dayjs from "dayjs";
 import VButton from "@/components/VButton.vue"; // @ is an alias to /src
+import List from "@/components/List.vue";
 
 @Component({
   components: {
-    VButton
+    VButton,
+    List
   }
 })
 export default class About extends Vue {
   private value1: any = "";
+  private clickList(val: any) {
+    console.log("val", val);
+  }
   private created(): void {
     console.log("dayjs", dayjs(new Date()).format("YYYY-MM-DD"));
     console.log(
