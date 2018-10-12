@@ -1,0 +1,13 @@
+$red: #ff4b59;
+$btnColor: #e64350;
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+@mixin ctn {
+  padding: 46px 0 10px;
+  height: 100%;
+  background-image: url(https://source.vipabc.com/ext/images/website/share/partner/bg.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+}
